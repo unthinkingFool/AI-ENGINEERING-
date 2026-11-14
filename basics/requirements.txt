@@ -1,0 +1,28 @@
+
+# Environment
+python-dotenv
+
+# Groq LLM
+groq
+langchain-groq
+GroqClient
+
+# LangChain
+langchain
+langchain-core
+langchain-community
+langchain-text-splitters
+
+# Agentic workflows
+langgraph
+
+# Embeddings
+sentence-transformers
+
+# Vector database
+qdrant-client
+
+# Document processing
+pypdf
+
+
