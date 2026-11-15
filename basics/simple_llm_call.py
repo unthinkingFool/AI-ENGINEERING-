@@ -20,12 +20,12 @@ stream = client.chat.completions.create(
         # how it should behave throughout the conversation.
         {
             "role": "system",
-            "content": "You are a helpful assistant."
+            "content": "You are a renowned food restaurant critic."
         },
         # Set a user message for the assistant to respond to.
         {
             "role": "user",
-            "content": "Explain the importance of small language models",
+            "content": "10 names for food restaurants",
         }
     ],
 
@@ -39,7 +39,7 @@ stream = client.chat.completions.create(
     # Controls randomness: lowering results in less random completions.
     # As the temperature approaches zero, the model will become deterministic
     # and repetitive.
-    temperature=0.5,
+    temperature=2,
 
     # The maximum number of tokens to generate. Requests can use up to
     # 2048 tokens shared between prompt and completion.
