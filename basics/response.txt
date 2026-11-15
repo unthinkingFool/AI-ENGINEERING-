@@ -1,0 +1,53 @@
+ChatCompletion(
+    id='chatcmpl-9e709ec9-4931-4764-b215-cebeead037e8',
+
+    choices=[
+        Choice(
+            finish_reason='stop',
+            index=0,
+            logprobs=None,
+
+            message=ChatCompletionMessage(
+                content='Hello! How can I assist you today?',
+                role='assistant',
+                annotations=None,
+                executed_tools=None,
+                function_call=None,
+                reasoning='We need to respond. Simple greeting.',
+                tool_calls=None
+            )
+        )
+    ],
+
+    created=1794754603,
+    model='openai/gpt-oss-120b',
+    object='chat.completion',
+    mcp_list_tools=None,
+    service_tier='on_demand',
+    system_fingerprint='fp_e5b4e54fbb',
+
+    usage=CompletionUsage(
+        completion_tokens=27,
+        prompt_tokens=81,
+        total_tokens=108,
+        completion_time=0.056664008,
+
+        completion_tokens_details=CompletionTokensDetails(
+            reasoning_tokens=9
+        ),
+
+        prompt_time=0.024165421,
+        prompt_tokens_details=None,
+        queue_time=0.368374026,
+        total_time=0.080829429
+    ),
+
+    usage_breakdown=None,
+
+    x_groq=XGroq(
+        id='req_01m7fvbt81e76ahrg5ky1k109a',
+        debug=None,
+        seed=749661837,
+        usage=None
+    )
+)
