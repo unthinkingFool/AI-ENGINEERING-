@@ -24,7 +24,7 @@ class CandidateData(BaseModel):
     email: str = Field(..., description="Candidate's email address")
     phone: str = Field(..., description="Candidate's phone number")
     skills: list[str] = Field(..., description="List of candidate's skills")
-    experience: str = Field(..., description="Candidate's work experience")
+    experience: str | None = None
     education: str = Field(..., description="Candidate's educational background")
     projects: list[str] = Field(..., description="List of candidate's projects")
 
@@ -61,7 +61,7 @@ def extract_text_from_pdf(file_path: Path) -> str | None:
 def parse_text(text: str)-> dict:
 
     llm= get_model()
-    schema=CandidateData.model_json_schema()
+    candidate_schema=CandidateData.model_json_schema()
 
     user_message = {
                 "role":"user",
@@ -75,7 +75,7 @@ def parse_text(text: str)-> dict:
                 "role":"system",
                 "content":f"""
                         You will parse the text and return a JSON object with the following fields:
-                        {schema}
+                        {candidate_schema}
                 If information is missing, use empty strings or empty lists.
                 Never invent candidate information.
                         """
