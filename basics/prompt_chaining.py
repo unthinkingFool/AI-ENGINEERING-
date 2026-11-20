@@ -153,7 +153,8 @@ def resume_extract():
 
     You are a professional HR assistant. Extract the skills from the candidate resume provided .
     Only return the skills , no other information . Do not invent any info yourself.
-
+    Output format :
+    skills in a list form . Nothing else should be added or invented
     """
     user_prompt=f"""
 
@@ -172,6 +173,7 @@ def JD_extract():
     You are a professional HR assistant. Extract the skills from the job description provided .
     Only return the skills , no other information . Do not invent any info yourself.
 
+    skills in a list form . Nothing else should be added or invented
     """
     user_prompt=f"""
 
