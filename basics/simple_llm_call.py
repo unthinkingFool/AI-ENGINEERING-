@@ -56,10 +56,8 @@ stream = client.chat.completions.create(
     stop=None,
 
     # If set, partial message deltas will be sent.
-    stream=True,
+    stream=False,
 )
 
 # Print the incremental deltas returned by the LLM.
-for chunk in stream:
-    print(chunk.choices[0].delta.content, end="")
-
+print(stream.choices[0].message.content)
